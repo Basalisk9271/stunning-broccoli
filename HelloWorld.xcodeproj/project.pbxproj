@@ -14,6 +14,7 @@
 		B9B70F54298B3FAB005F82CA /* HelloWorldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B70F53298B3FAB005F82CA /* HelloWorldTests.swift */; };
 		B9B70F5E298B3FAB005F82CA /* HelloWorldUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B70F5D298B3FAB005F82CA /* HelloWorldUITests.swift */; };
 		B9B70F60298B3FAB005F82CA /* HelloWorldUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B70F5F298B3FAB005F82CA /* HelloWorldUITestsLaunchTests.swift */; };
+		B9B70F6E298B45ED005F82CA /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = B9B70F6D298B45ED005F82CA /* OpenAISwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9B70F6E298B45ED005F82CA /* OpenAISwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +145,9 @@
 			dependencies = (
 			);
 			name = HelloWorld;
+			packageProductDependencies = (
+				B9B70F6D298B45ED005F82CA /* OpenAISwift */,
+			);
 			productName = HelloWorld;
 			productReference = B9B70F3F298B3FAA005F82CA /* HelloWorld.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +220,9 @@
 				Base,
 			);
 			mainGroup = B9B70F36298B3FAA005F82CA;
+			packageReferences = (
+				B9B70F6C298B45ED005F82CA /* XCRemoteSwiftPackageReference "OpenAISwift" */,
+			);
 			productRefGroup = B9B70F40298B3FAA005F82CA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -583,6 +591,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B9B70F6C298B45ED005F82CA /* XCRemoteSwiftPackageReference "OpenAISwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/adamrushy/OpenAISwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B9B70F6D298B45ED005F82CA /* OpenAISwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B9B70F6C298B45ED005F82CA /* XCRemoteSwiftPackageReference "OpenAISwift" */;
+			productName = OpenAISwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B9B70F37298B3FAA005F82CA /* Project object */;
 }
