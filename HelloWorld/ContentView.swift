@@ -16,7 +16,7 @@ final class ViewModel: ObservableObject{
     private var client: OpenAISwift?
     
     func setup(){
-        client = OpenAISwift(authToken: "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")
+        client = OpenAISwift(authToken: "APITOKENHERE")
     }
     
     func send(text: String,
