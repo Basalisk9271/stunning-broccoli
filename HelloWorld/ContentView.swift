@@ -16,12 +16,12 @@ final class ViewModel: ObservableObject{
     private var client: OpenAISwift?
     
     func setup(){
-        client = OpenAISwift(authToken: "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")
+        client = OpenAISwift(authToken: "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")
     }
     
     func send(text: String,
               completion: @escaping(String) -> Void){
-        client?.sendCompletion(with: text, maxTokens: 500, completionHandler: {result in
+        client?.sendCompletion(with: text, model: .codex(.cushman), maxTokens: 500, completionHandler: {result in
             switch result{
             case .success(let model):
                 let output = model.choices.first?.text ?? ""
